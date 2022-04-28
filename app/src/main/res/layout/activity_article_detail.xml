@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools" xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="@color/white_smoke"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.ArticleDetailActivity">
+
+    <!--    bar    -->
+    <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            app:title="Article Detail"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:elevation="4dp"
+            app:titleTextColor="@color/white"
+            android:theme="@style/AppTheme"
+            app:navigationIcon="@drawable/ic_back"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+    <ScrollView
+            android:layout_above="@+id/send_comment_bar"
+            android:layout_below="@id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <!--   content     -->
+        <LinearLayout
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <LinearLayout
+                    android:padding="10dp"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                        android:id="@+id/article_title"
+                        android:textStyle="bold"
+                        android:textSize="20sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                <View
+                        android:background="@color/grey"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"/>
+
+                <ImageView
+                        android:id="@+id/article_cover"
+                        android:src="@drawable/no_image"
+                        android:layout_gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"/>
+
+                <TextView
+                        android:id="@+id/article_content"
+                        android:textSize="16sp"
+                        android:minHeight="100dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+            <!--   comments     -->
+            <ListView
+                    android:id="@+id/comments_list"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+            android:id="@+id/send_comment_bar"
+            android:background="@color/white"
+            android:layout_alignParentBottom="true"
+            android:padding="5dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <EditText
+                android:id="@+id/comment_content"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
+        <ImageButton
+                android:id="@+id/comment_send_btn"
+                android:src="@drawable/ic_send"
+                android:scaleType="centerCrop"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:padding="8dp"
+                android:layout_margin="5dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
+        <ImageButton
+                android:id="@+id/good_btn"
+                android:src="@drawable/ic_good"
+                android:scaleType="centerCrop"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:padding="5dp"
+                android:layout_margin="5dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
+        <ImageButton
+                android:id="@+id/collection_btn"
+                android:src="@drawable/ic_collection"
+                android:scaleType="centerCrop"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:padding="5dp"
+                android:layout_margin="5dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "763482982065",
+    "firebase_url": "https://interest-planet-default-rtdb.firebaseio.com",
+    "project_id": "interest-planet",
+    "storage_bucket": "interest-planet.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:763482982065:android:970eb9c9bafca1ee6cc490",
+        "android_client_info": {
+          "package_name": "com.example.interestplanet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "763482982065-ab0l87q47guko80rpnnf21no65tdpcgi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWvcRNGEC-1WK2Xh0w05BXdSAEf-bt8cQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "763482982065-ab0l87q47guko80rpnnf21no65tdpcgi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
