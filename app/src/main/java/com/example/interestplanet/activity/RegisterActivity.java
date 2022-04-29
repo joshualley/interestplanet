@@ -56,7 +56,8 @@ public class RegisterActivity extends AppCompatActivity {
                     });
                 } else {
                     // add a new user
-                    User user = new User(uname, pwd, "", "");
+                    String encryptedPwd = ServiceRegister.UserServiceInstance.encryptPwd(pwd);
+                    User user = new User(uname, encryptedPwd, "", "");
                     ServiceRegister.UserServiceInstance.addOrUpdate(user);
                     runOnUiThread(() -> {
                         Toast.makeText(this, "Register successfully!", Toast.LENGTH_SHORT).show();
