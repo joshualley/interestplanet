@@ -127,16 +127,15 @@ public class MineFragment extends Fragment {
                 suffix = type[1];
             }
             String fn = UUID.randomUUID().toString() + "." + suffix;
-            // Log.i("filename", fn);
 
             User user = (User) StatusStoreService.getInstance().get("user");
             // upload the user's avatar
             ImageService.upload(user.getId(), fn, bitmap, ((isSuccess, path) -> {
                 if (isSuccess) {
                     userAvatar.setImageBitmap(bitmap);
-                    // user.setAvatarUrl(path);
-                    // ServiceRegister.UserServiceInstance.addOrUpdate(user);
-                    // StatusStoreService.getInstance().set("user", user);
+                    user.setAvatarUrl(path);
+                    ServiceRegister.UserServiceInstance.addOrUpdate(user);
+                    StatusStoreService.getInstance().set("user", user);
                     Toast.makeText(getContext(), "Successfully", Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(getContext(), "Failure", Toast.LENGTH_SHORT).show();

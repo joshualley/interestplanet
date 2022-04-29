@@ -16,14 +16,11 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         // hide the status bar
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        // hide the title bar
-//        getSupportActionBar().hide();
         setContentView(R.layout.activity_splash);
         new Timer().schedule(new TimerTask() {
             @Override
             public void run() {
                 Intent i = new Intent(SplashActivity.this, LoginActivity.class);
-//                Intent i = new Intent(SplashActivity.this, ArticleDetailActivity.class);
                 startActivity(i);
                 finish();
             }
